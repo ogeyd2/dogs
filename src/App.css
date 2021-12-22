@@ -1,0 +1,124 @@
+/* --------- Google Fontes --------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --------- Variaveis CSS --------- */
+:root {
+  /* --------- Cores --------- */
+  --primary: ;
+
+  /* --------- Tipografia --------- */
+  --type-1: 'Poppins', sans-serif;
+  --type-2: ;
+  /* --------- Peso --------- */
+  --medium: 500;
+  --bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #333;
+  padding-top: 4rem;
+  font-family: var(--type-1);
+}
+/* --------- Reset Estilos --------- */
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button,
+input {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--type-1);
+  color: #333;
+}
+
+/* --------- Layout --------- */
+.container {
+  max-width: 800px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+.mainContainer {
+  margin-top: 4rem;
+}
+/* --------- Titulo --------- */
+.title {
+  font-weight: var(--bold);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+.title::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fb1;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+/* --------- Form --------- */
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #333; /* color of the tracking area */
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ddd; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #ddd; /* creates padding around scroll thumb */
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+.AppBody {
+  flex: 1;
+}
+.VictoryContainer {
+  height: initial !important;
+}
